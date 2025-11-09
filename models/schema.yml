@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_gwz_data
+    tables:
+      - name: sales
+       identifier: raw_sales
+       description: sales data for greenweez company
+       columns: 
+         - name: date_date
+           description: date of the order
+           tests: 
+             - not_null
+        - name: order_id
+          tests: 
+           - not_null
+        -  name: pdt_id
+           tests: not_null
+        - name: revenue
+          tests: 
+           - not_null  
+        - name: quantity
+          tests: 
+           - not_null 
+              
